@@ -1,7 +1,20 @@
+
 module.exports = {
-  entry: `./src/index.jsx` ,
+  entry: {
+    vendor: [
+      'babel-polyfill',
+      'react',
+      'react-dom',
+      'prop-types',
+      'axios',
+      'lodash.debounce',
+      'lodash.pickby'
+    ],
+    app: [`./src/index.jsx`]
+  },
+  
   output: {
-    filename: "main.js"
+    filename: '[name].js'
   },
   devtool: 'eval-source-map',
   module: {
@@ -16,4 +29,5 @@ module.exports = {
       },
     ],
   },
+  
 };

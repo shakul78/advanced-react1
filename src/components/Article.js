@@ -56,3 +56,4 @@ Article.propTypes = {
 };
 
 export default storeProvider(Article);
+//export default Article;

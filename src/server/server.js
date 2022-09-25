@@ -2,7 +2,7 @@ import express from "express";
 import * as ReactDOMServer from 'react-dom/server';
 import { data } from '../testData';
 import serverRender from '../renderers/server';
-import App from "../components/app";
+import App from "../components/App";
 
 const server = express();
 server.use(express.static("dist"));
@@ -23,7 +23,8 @@ const initialData = JSON.stringify(initialMarkup.initialData);
       </script>
       <body>
         <div id="app">${initialMarkup.initialMarkup}</div>
-        <script src="/main.js"></script>
+        <script src="/vendor.js?version=1"></script>
+        <script src="/app.js?version=1"></script>
       </body>
     </html>
   `)
