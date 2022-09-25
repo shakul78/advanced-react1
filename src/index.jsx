@@ -11,10 +11,5 @@ import App from "./components/app";
 
 console.log(window.initialData);
 const store = new StateApi(window.initialData);
-
-// ReactDOM.render(
-//   <App store={store} />,
-//   document.getElementById('root')
-// );
 const container = document.getElementById("app");
 ReactDOM.hydrateRoot(container, <App store={store} />);
